@@ -4,6 +4,30 @@
     {% # Inlined CSS Variables %}
     {% render 'css-variables' %}
 
+    {% style %}
+      /* START: Spicy Rice font */
+      @font-face {
+        font-family: "Spicy Rice";
+        src: url("{{ 'spicy-rice-latin-400-normal.woff2' | asset_url }}")
+          format("woff2");
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+      }
+      /* END: Spicy Rice font */
+      
+      /* START: Work Sans font */
+      @font-face {
+        font-family: "Work Sans Variable";
+        src: url("{{ 'work-sans-latin-wght-normal.woff2' | asset_url }}")
+          format("woff2");
+        font-style: normal;
+        font-weight: 100 900;
+        font-display: swap;
+      }
+      /* END: Work Sans font */
+    {% endstyle %}
+
     {% comment %}
       Font preloading:
       1. Preconnect to font CDN for faster connection

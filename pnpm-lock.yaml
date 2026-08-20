@@ -206,6 +206,13 @@ settings:
 importers:
 
   .:
+    dependencies:
+      '@fontsource-variable/work-sans':
+        specifier: ^5.3.0
+        version: 5.3.0
+      '@fontsource/spicy-rice':
+        specifier: ^5.3.0
+        version: 5.3.0
     devDependencies:
       '@tailwindcss/cli':
         specifier: ^4.3.3
@@ -215,6 +222,12 @@ importers:
         version: 4.3.3
 
 packages:
+
+  '@fontsource-variable/work-sans@5.3.0':
+    resolution: {integrity: sha512-le8h/OIIuhm5Z7TdvuMw0yKg2gaCZUiMec8zaumsVVjzeJRBPEF0bQI/MkaZDHCVzZDvZoP/O2LiGOSfDLSbaw==}
+
+  '@fontsource/spicy-rice@5.3.0':
+    resolution: {integrity: sha512-pmezo7oZAJZdOHfg98GiOeeGsDC6QP5y0GQD/PtK9oGcq9jshQKYwxVLV1iv3I4sjIw4hw/JeOnQieeZh4Vq2w==}
 
   '@jridgewell/gen-mapping@0.3.13':
     resolution: {integrity: sha512-2kkt/7niJ6MgEPxF0bYdQ6etZaA+fQvDcLKckhy1yIQOzaoKjBBjSj63/aLVjYE3qhRt5dvM+uUyfCg6UKCBbA==}
@@ -564,6 +577,10 @@ packages:
     engines: {node: '>=8.0'}
 
 snapshots:
+
+  '@fontsource-variable/work-sans@5.3.0': {}
+
+  '@fontsource/spicy-rice@5.3.0': {}
 
   '@jridgewell/gen-mapping@0.3.13':
     dependencies:
