@@ -9,6 +9,10 @@
  */
 {
   "sections": {
+    "hero": {
+      "type": "hero",
+      "settings": {}
+    },
     "use-them-with": {
       "type": "use-them-with",
       "settings": {}
@@ -27,6 +31,7 @@
     }
   },
   "order": [
+    "hero",
     "use-them-with",
     "remember-banner",
     "looking-cool-feeling-good",

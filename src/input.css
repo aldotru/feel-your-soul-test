@@ -42,6 +42,14 @@
     @apply text-secondary text-balance uppercase tracking-[-1px] sm:tracking-[-2px] font-bold leading-tight;
 }
 
+.header-main {
+    @apply text-black font-sans font-black italic uppercase tracking-[-2px] [-webkit-text-stroke:3px_black] md:[-webkit-text-stroke:5px_black] leading-[0.875];
+}
+
+.header-main--primary {
+    @apply text-primary;
+}
+
 .header-punk {
     @apply text-black font-secondary uppercase tracking-[-2px] [-webkit-text-stroke:2px_black] md:[-webkit-text-stroke:3px_black] leading-none;
 }
@@ -57,7 +65,7 @@
 button,
 a.btn,
 .btn {
-    @apply bg-neutral hover:bg-primary text-black font-secondary uppercase tracking-[-2px] md:text-[1.5rem] max-w-[300px] w-full rounded-full border border-4 tracking-[0.125px] transition-all duration-160 ease-in-out p-0.5 text-center;
+    @apply block bg-neutral hover:bg-primary text-black font-secondary uppercase tracking-[-2px] md:text-[1.5rem] max-w-[300px] mx-auto w-full rounded-full border border-4 tracking-[0.125px] transition-all duration-160 ease-in-out p-0.5 text-center;
 }
 
 .btn--primary {
