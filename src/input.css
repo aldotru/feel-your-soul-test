@@ -27,6 +27,28 @@
 
 /* START: Utilities */
 .container {
-    @apply w-7xl;
+    @apply max-w-7xl mx-auto w-[85%] sm:w-[90%];
+}
+
+.section-padding {
+    @apply py-16 md:py-20;
+}
+
+.header-punk {
+    @apply text-black font-secondary uppercase tracking-[-2px] md:text-[4rem] [-webkit-text-stroke:2px_black] md:[-webkit-text-stroke:3px_black];
+}
+
+.header-punk--primary {
+    @apply text-primary;
+}
+
+button,
+a.btn,
+.btn {
+    @apply bg-neutral hover:bg-primary text-black font-secondary uppercase tracking-[-2px] md:text-[1.5rem] max-w-[300px] w-full rounded-full border border-4 tracking-[0.125px] transition-all duration-160 ease-in-out p-0.5;
+}
+
+.btn--primary {
+    @apply bg-primary hover:bg-neutral;
 }
 /* END: Utilities */
