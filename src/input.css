@@ -34,6 +34,10 @@
     @apply py-16 md:py-20;
 }
 
+.copy-base {
+    @apply text-secondary text-balance uppercase tracking-[-1px] sm:tracking-[-2px] font-bold leading-tight;
+}
+
 .header-punk {
     @apply text-black font-secondary uppercase tracking-[-2px] md:text-[4rem] [-webkit-text-stroke:2px_black] md:[-webkit-text-stroke:3px_black];
 }

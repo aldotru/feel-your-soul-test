@@ -12,9 +12,14 @@
     "remember-banner": {
       "type": "remember-banner",
       "settings": {}
-    }
+    },
+    "this-is-zander": {
+      "type": "this-is-zander",
+      "settings": {}
+    },
   },
   "order": [
-    "remember-banner"
+    "remember-banner",
+    "this-is-zander"
   ]
 }
