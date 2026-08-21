@@ -49,10 +49,6 @@ p {
   text-wrap: pretty;
 }
 
-header {
-  height: auto !important;
-}
-
 p,
 h1,
 h2,

@@ -1,0 +1,88 @@
+<section class="section-padding">
+  <div class="container">
+    <header class="mbe-6 sm:mbe-8 max-w-130 md:max-w-156.5 mx-auto">
+      <h2 class="header-punk header-punk--primary text-4xl sm:text-center">Keep looking cool, but feeling good</h2>
+    </header>
+    <div class="flex flex-col sm:flex-row gap-8 items-center justify-between">
+      <div class="w-full sm:w-1/2">
+        <p class="copy-base mbe-6 md:mbe-10 text-lg sm:text-2xl lg:text-5xl leading-none!">Enjoy the benefits that footsoulS bring you</p>
+        <ul class="flex flex-col gap-4">
+          <li class="flex items-center gap-4 sm:gap-6 md:gap-8">
+            <figure class="benefits-icon-box w-[46.5]">
+              <img
+                src="{{ 'enhance-life-icon.svg' | asset_url }}"
+                alt="Enhance your daily life icon"
+                width="186"
+                height="186"
+                loading="lazy"
+                class="w-full"
+              />
+            </figure>
+            <h3 class="copy-base text-md xs:text-xl md:text-2xl lg:text-[2rem] max-w-92 w-full leading-none!">Enhance Your Daily Life</h3>
+          </li>
+          <li class="flex items-center gap-4 sm:gap-6 md:gap-8">
+            <figure class="benefits-icon-box w-[46.5]">
+              <img
+                src="{{ 'wear-more-icon.svg' | asset_url }}"
+                alt="Wear more your Vans and Converse icon"
+                width="186"
+                height="186"
+                loading="lazy"
+                class="w-full"
+              />
+            </figure>
+            <h3 class="copy-base text-md xs:text-xl md:text-2xl lg:text-[2rem] max-w-92 w-full leading-none!">Wear your Vans & Converse more!</h3>
+          </li>
+          <li class="flex items-center gap-4 sm:gap-6 md:gap-8">
+            <figure class="benefits-icon-box w-[46.5]">
+              <img
+                src="{{ 'healthy-4-u-icon.svg' | asset_url }}"
+                alt="Healthy for you icon"
+                width="186"
+                height="186"
+                loading="lazy"
+                class="w-full"
+              />
+            </figure>
+            <h3 class="copy-base text-md xs:text-xl md:text-2xl lg:text-[2rem] max-w-92 w-full leading-none!">Healthy 4 u</h3>
+          </li>
+          <li class="flex items-center gap-4 sm:gap-6 md:gap-8">
+            <figure class="benefits-icon-box w-[46.5]">
+              <img
+                src="{{ 'inspire-you-icon.svg' | asset_url }}"
+                alt="Inspire you today icon"
+                width="186"
+                height="186"
+                loading="lazy"
+                class="w-full"
+              />
+            </figure>
+            <h3 class="copy-base text-md xs:text-xl md:text-2xl lg:text-[2rem] max-w-92 w-full leading-none!">Inspire you to make today count</h3>
+          </li>
+        </ul>
+      </div>
+      <figure
+          style="background-image: url('../assets/bg-wavy-curves-colorful.webp');"
+          class="media-bg-box w-full sm:w-1/2 p-3 sm:p-6 border-4 sm:border-8 border-black rounded-2xl bg-gray-300"
+        >
+        <img
+          src="{{ 'feel-your-soul-souls-display.webp' | asset_url }}"
+          alt="Zander on top of boxes"
+          width="1124"
+          height="1398"
+          loading="lazy"
+          class="rounded-lg w-full h-full"
+        />
+      </figure>
+    </div>
+  </div>
+</section>
+
+{% render 'colorful-separator' %}
+
+{% schema %}
+{
+  "name": "Looking Cool Feeling Good",
+  "settings": []
+}
+{% endschema %}

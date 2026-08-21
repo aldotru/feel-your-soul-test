@@ -13,13 +13,18 @@
       "type": "remember-banner",
       "settings": {}
     },
+    "looking-cool-feeling-good": {
+      "type": "looking-cool-feeling-good",
+      "settings": {}
+    },
     "this-is-zander": {
       "type": "this-is-zander",
       "settings": {}
-    },
+    }
   },
   "order": [
     "remember-banner",
+    "looking-cool-feeling-good",
     "this-is-zander"
   ]
 }

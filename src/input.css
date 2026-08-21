@@ -10,6 +10,10 @@
 @source "../assets";
 
 @theme {
+    /* START: Breakpoints */
+    --breakpoint-xs: 30rem;
+    /* END: Breakpoints */
+
     /* START: Fonts */
     --font-main: "Work Sans Variable";
     --font-secondary: "Spicy Rice";
