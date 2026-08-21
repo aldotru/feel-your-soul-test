@@ -1,0 +1,42 @@
+<section class="section-padding">
+  <div class="container flex flex-col sm:flex-row gap-8 items-center justify-between">
+    <figure class="media-bg-box w-full sm:w-1/2 p-3 sm:p-6 border-4 sm:border-8 border-black rounded-2xl bg-gray-300">
+      <img
+        src="{{ 'zander-boxes.webp' | asset_url }}"
+        alt="Zander on top of boxes"
+        loading="lazy"
+        class="rounded-lg w-full h-full"
+      />
+    </figure>
+    <div class="w-full sm:w-1/2">
+      <header class="mbe-2 md:mbe-4">
+        <h2 class="header-punk header-punk--primary text-4xl">This is Zander</h2>
+      </header>
+      <p class="copy-base text-lg sm:text-2xl lg:text-[2rem]">He is the founder and CEO of FEEL YOUR SOUL. Jacob started FYS right from his apartment in Santa Barbara, CA and is on a mission to share his progress of growing FEEL YOUR SOUL to inspire you to chase your dreams + goals!</p>
+    </div>
+  </div>
+</section>
+
+{% render 'colorful-separator' %}
+
+{% stylesheet %}
+.media-bg-box {
+  background-image: url('../assets/bg-wavy-curves.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "This is Zander",
+  "settings": [],
+  "presets": [
+    {
+      "name": "This is Zander Template",
+      "category": "Demo"
+    }
+  ]
+}
+{% endschema %}
