@@ -1,30 +1,80 @@
-<header>
-  <h2 class="header__title">
-    {{ shop.name | link_to: routes.root_url }}
-  </h2>
-
-  <div class="header__menu">
-    {% for link in section.settings.menu.links %}
-      {{ link.title | link_to: link.url }}
-    {% endfor %}
+<header class="bg-neutral">
+  <div class="bg-[#f7df75] p-3 relative flex justify-center items-center border-b border-dashed">
+    <figure class="absolute left-4 top-1/2 -translate-y-1/2 opacity-60">
+      <img
+        src="{{ 'zander-logo.webp' | asset_url }}"
+        alt="Zander logo"
+        width="90"
+        height="30"
+        loading="lazy"
+        class="w-22.5 hidden! md:block!"
+      />
+    </figure>
+    <p class="text-xs md:text-sm text-neutral--footer text-center text-balance!">Same day shipping on orders placed before 12:00pm EST M - F</p>
   </div>
-
-  <div class="header__icons">
-    {% if shop.customer_accounts_enabled %}
-      <shopify-account menu="{{ section.settings.customer_account_menu }}">
-        {{ 'icon-account.svg' | inline_asset_content }}
-      </shopify-account>
-    {% endif %}
-
-    <a href="{{ routes.cart_url }}">
-      {% if cart.item_count > 0 %}
-        <sup>{{ cart.item_count }}</sup>
-      {% endif %}
-
-      {{ 'icon-cart.svg' | inline_asset_content }}
+  <div class="container w-[90%]! sm:w-[85%]! py-2 sm:py-4 grid grid-cols-[1fr_auto_1fr] gap-4 justify-between items-center">
+    <div class="flex md:hidden cursor-pointer">
+      <span class="flex items-start justify-center rotate-90 md:hidden scale-150">‖</span>
+    </div>
+    <nav class="hidden md:block">
+      <ul class="flex gap-6 items-center">
+        <li>
+          <a href="#" class="">Shop</a>
+        </li>
+        <li>
+          <a href="#" class="">About</a>
+        </li>
+        <li>
+          <a href="#" class="">Community</a>
+        </li>
+      </ul>
+    </nav>
+    <a href="{{ routes.root_url }}">
+      <figure>
+        <img
+          src="{{ 'feel-your-soul-logo.webp' | asset_url }}"
+          alt="Feel Your Soul logo"
+          width="230"
+          height="26"
+          loading="lazy"
+          class="w-40 sm:w-57.5"
+        />
+      </figure>
     </a>
+    <nav>
+      <ul class="flex gap-2 md:gap-6 items-center justify-end">
+        <li>
+          <a href="#" class="">🔎</a>
+        </li>
+        <li>
+          <a href="#" class="hidden md:block">👤</a>
+        </li>
+        <li>
+          <a href="#" class="">👜</a>
+        </li>
+        <li class="hidden md:block">
+          <div class="input-box bg-white input-box--nav w-fit flex justify-center relative rounded-[7px]">
+            <select
+              id="region"
+              name="region"
+              class="region-dropdown text-sm! w-fit field-sizing-content bg-transparent! px-2 py-1 border border-neutral--footer relative rounded-[7px]!"
+            >
+              <option value="eng" selected>🇺🇸 English</option>
+              <option value="es">🇪🇸 Spanish</option>
+              <option value="fr">🇫🇷 French</option>
+            </select>
+          </div>
+        </li>
+      </ul>
+    </nav>
   </div>
 </header>
+
+{% stylesheet %}
+  .input-box--nav::before {
+    background: white;
+  }
+{% endstylesheet %}
 
 {% schema %}
 {
