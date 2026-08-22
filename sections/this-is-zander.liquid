@@ -1,4 +1,7 @@
-<section class="section-padding">
+<section
+  class="section-padding"
+  style="--zander-background: url('{{ 'bg-wavy-curves.webp' | asset_url }}');"
+>
   <div class="container flex flex-col-reverse sm:flex-row gap-8 items-center justify-between">
     <figure class="media-bg-box w-full sm:w-1/2 p-3 sm:p-6 border-4 sm:border-8 border-black rounded-2xl bg-gray-300">
       <img
@@ -21,7 +24,7 @@
 
 {% stylesheet %}
 .media-bg-box {
-  background-image: url('../assets/bg-wavy-curves.webp');
+  background-image: var(--zander-background);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;

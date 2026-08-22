@@ -1,4 +1,7 @@
-<section class="remember-banner py-16 md:py-0 md:h-194.5 flex flex-col justify-center">
+<section
+  class="remember-banner py-16 md:py-0 md:h-194.5 flex flex-col justify-center"
+  style="--remember-banner-background: url('{{ 'feel-your-soul-stickers.webp' | asset_url }}');"
+>
   <header class="flex flex-col h-auto items-center content-center gap-4 md:gap-8 text-center max-w-125 w-[90%] mx-auto">
     <h2 class="header-punk header-punk--section-header header-punk--primary text-4xl">Remember the 4th one is for free!!</h2>
     <a
@@ -14,7 +17,7 @@
 
 {% stylesheet %}
   .remember-banner {
-    background-image: url('../assets/feel-your-soul-stickers.webp');
+    background-image: var(--remember-banner-background);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
