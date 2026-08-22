@@ -207,6 +207,18 @@
   .static {
     position: static;
   }
+  .-top-3 {
+    top: calc(var(--spacing) * -3);
+  }
+  .-top-6 {
+    top: calc(var(--spacing) * -6);
+  }
+  .-top-8 {
+    top: calc(var(--spacing) * -8);
+  }
+  .-top-10 {
+    top: calc(var(--spacing) * -10);
+  }
   .top-6 {
     top: calc(var(--spacing) * 6);
   }
@@ -472,8 +484,14 @@
     }
   }
   @media (width >= 48rem) {
+    .md\:-top-10 {
+      top: calc(var(--spacing) * -10);
+    }
     .md\:mbe-4 {
       margin-block-end: calc(var(--spacing) * 4);
+    }
+    .md\:mbe-8 {
+      margin-block-end: calc(var(--spacing) * 8);
     }
     .md\:mbe-10 {
       margin-block-end: calc(var(--spacing) * 10);
