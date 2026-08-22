@@ -1,57 +1,137 @@
-<footer>
-  <div class="footer__copyright">
-    &copy;
-    {{ 'now' | date: '%Y' }}
-    {{ shop.name | link_to: routes.root_url }}, {{ powered_by_link }}
-  </div>
-
-  <div class="footer__links">
-    {% for link in section.settings.menu.links %}
-      {{ link.title | link_to: link.url }}
-    {% endfor %}
-  </div>
-
-  <div class="footer__payment">
-    {% if section.settings.show_payment_icons %}
-      {% for type in shop.enabled_payment_types %}
-        {{ type | payment_type_svg_tag }}
-      {% endfor %}
-    {% endif %}
+<footer class="bg-neutral pbs-12 pbe-50 md:py-12 m-0! relative overflow-hidden">
+  <div class="container flex flex-col gap-26">
+    <div class="footer-top grid xs:grid-cols-2 md:grid-cols-3 gap-8 md:gap-6 xs:gap-y-14 md:gap-y-20">
+      <section class="flex flex-col gap-4">
+        <header>
+          <h2 class="font-main text-neutral--footer text-lg uppercase tracking-tight font-bold leading-none">Navigate</h2>
+        </header>
+        <nav>
+          <ul class="flex flex-col gap-2 md:gap-4">
+            <li>
+              <a
+                href="#"
+                class="text-neutral--footer capitalize decoration-1 border-be">Shop converse footsouls</a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-neutral--footer capitalize decoration-1 border-be">Shop vans footsouls</a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-neutral--footer capitalize decoration-1 border-be">About</a>
+            </li>
+          </ul>
+        </nav>
+      </section>
+      <section class="flex flex-col gap-4">
+        <header>
+          <h2 class="font-main text-neutral--footer text-lg uppercase tracking-tight font-bold leading-none">Official</h2>
+        </header>
+        <nav>
+          <ul class="flex flex-col gap-2 md:gap-4">
+            <li>
+              <a
+                href="#"
+                class="text-neutral--footer capitalize decoration-1 border-be">Returns & exchanges</a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-neutral--footer capitalize decoration-1 border-be">Shipping information</a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-neutral--footer capitalize decoration-1 border-be">Privacy Policy</a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-neutral--footer capitalize decoration-1 border-be">Terms</a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-neutral--footer capitalize decoration-1 border-be">FAQ</a>
+            </li>
+          </ul>
+        </nav>
+      </section>
+      <section class="flex flex-col gap-4">
+        <header>
+          <h2 class="font-main text-neutral--footer text-lg uppercase tracking-tight font-bold leading-none">Support</h2>
+        </header>
+        <p class="text-neutral--footer">Fill out out <a href="#" class="capitalize decoration-1 border-be">Contact Form</a> or email <a href="mailto:help@feelyoursoul.com">help@feelyoursoul.com</a></p>
+      </section>
+      <section class="flex flex-col gap-4">
+        <header>
+          <h2 class="font-main text-neutral--footer text-lg uppercase tracking-tight font-bold leading-none">Social</h2>
+        </header>
+        <nav>
+          <ul class="flex flex-col gap-2 md:gap-4">
+            <li>
+              <a
+                href="#"
+                class="text-neutral--footer capitalize decoration-1 border-be">Instagram</a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-neutral--footer capitalize decoration-1 border-be">TikTok</a>
+            </li>
+          </ul>
+        </nav>
+      </section>
+    </div>
+    <div class="footer-bottom flex flex-col gap-4">
+      <div class="country-region flex flex-col gap-2">
+        <label
+          id="region"
+          class="text-sm text-neutral--footer"
+        >Country/region</label>
+        <div class="input-box w-fit flex justify-center relative">
+          <select
+            id="region"
+            name="region"
+            class="region-dropdown w-fit field-sizing-content bg-transparent! py-2 px-4 border rounded-none! border-neutral--footer relative"
+          >
+            <option value="usd-USD" selected>USD $ | US</option>
+            <option value="mxn-MEX">MXN $ | Mexico</option>
+            <option value="eur-GER">EUR $ | Germany</option>
+            <option value="pnd-UK">PND $ | UK</option>
+          </select>
+        </div>
+      </div>
+      <p class="text-sm text-neutral--footer">&copy; 2026, <span class="uppercase">Feel Your Soul</span></p>
+    </div>
+    <img
+        src="{{ 'feel-your-soul-heart.webp' | asset_url }}"
+        alt="Feel Your Soul heart logo"
+        loading="lazy"
+        class="w-full sm:w-120 rotate-40 sm:rotate-0 -bottom-50 xs:-bottom-85 left-1/2 sm:left-auto -translate-x-1/2 md:w-160 absolute xs:-right-95 sm:-bottom-35 md:-right-127.5 md:-bottom-45 transition duration-100 hover:scale-105"
+      />
   </div>
 </footer>
 
 {% stylesheet %}
-  footer {
+  .input-box::before {
+    content: '>';
+    background: #f1f0ed;
+    position: absolute;
+      right: 5px;
+      top: 50%;
+    font-size: 0.75rem;
+    line-height: 1;
+    rotate: 90deg;
+    translate: 0 -45%;
+    width: 1rem;
+    height: 1rem;
     display: flex;
-    justify-content: space-between;
-    margin-top: 2rem;
-  }
-  footer a {
-    text-decoration: none;
-    color: var(--color-foreground);
-  }
-  footer .footer__links,
-  footer .footer__payment {
-    display: flex;
-    gap: 1rem;
+      align-items: center;
+      justify-content: center;
+    pointer-events: none;
+    z-index: 1;
   }
 {% endstylesheet %}
-
-{% schema %}
-{
-  "name": "t:general.footer",
-  "settings": [
-    {
-      "type": "link_list",
-      "id": "menu",
-      "label": "t:labels.menu"
-    },
-    {
-      "type": "checkbox",
-      "id": "show_payment_icons",
-      "label": "t:labels.show_payment_icons",
-      "default": true
-    }
-  ]
-}
-{% endschema %}
