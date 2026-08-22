@@ -17,6 +17,10 @@
       "type": "use-them-with",
       "settings": {}
     },
+    "check-out": {
+      "type": "check-out",
+      "settings": {}
+    },
     "remember-banner": {
       "type": "remember-banner",
       "settings": {}
@@ -33,6 +37,7 @@
   "order": [
     "hero",
     "use-them-with",
+    "check-out",
     "remember-banner",
     "looking-cool-feeling-good",
     "this-is-zander"
